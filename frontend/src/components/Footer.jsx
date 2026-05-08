@@ -26,10 +26,10 @@ const Footer = () => {
                         </p>
 
                         <Socials>
-                            <a href="#"><i className="fab fa-youtube"></i></a>
-                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                            <a href="#"><i className="fab fa-instagram"></i></a>
-                            <a href="#"><i className="fab fa-whatsapp"></i></a>
+                            <a href="#home"><i className="fab fa-youtube"></i></a>
+                            <a href="#home"><i className="fab fa-facebook-f"></i></a>
+                            <a href="#home"><i className="fab fa-instagram"></i></a>
+                            <a href="#home"><i className="fab fa-whatsapp"></i></a>
                         </Socials>
                     </Brand>
 
