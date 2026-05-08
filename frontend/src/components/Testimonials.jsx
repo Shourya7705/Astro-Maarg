@@ -134,15 +134,15 @@ const Container = styled.div`
 
 /* DECOR */
 
-const DecorTop = styled.div`
-  width: 100%;
-  height: 60px;
-  background: var(--maroon-deep);
-`;
+// const DecorTop = styled.div`
+//   width: 100%;
+//   height: 60px;
+//   background: var(--maroon-deep);
+// `;
 
-const DecorBottom = styled(DecorTop)`
-  transform: scaleY(-1);
-`;
+// const DecorBottom = styled(DecorTop)`
+//   transform: scaleY(-1);
+// `;
 
 /* HEADER */
 
