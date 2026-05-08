@@ -4,7 +4,7 @@ import Ticker from "./components/Ticker";
 import Awards from "./components/Awards";
 import About from "./components/About";
 import Services from "./components/Services";
-import Media from "./components/Media";
+// import Media from "./components/Media";
 import Testimonials from "./components/Testimonials";
 import Horoscope from "./components/Horoscope";
 import "./App.css";
