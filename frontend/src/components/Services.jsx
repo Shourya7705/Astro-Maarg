@@ -215,17 +215,17 @@ const Icon = styled.div`
 
 /* LINK */
 
-const Link = styled.a`
-  font-family: 'Cinzel', serif;
-  font-size: 0.75rem;
-  color: var(--gold);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: gap 0.3s;
+// const Link = styled.a`
+//   font-family: 'Cinzel', serif;
+//   font-size: 0.75rem;
+//   color: var(--gold);
+//   text-decoration: none;
+//   display: flex;
+//   align-items: center;
+//   gap: 6px;
+//   transition: gap 0.3s;
 
-  &:hover {
-    gap: 10px;
-  }
-`;
+//   &:hover {
+//     gap: 10px;
+//   }
+// `;
