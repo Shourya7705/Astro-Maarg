@@ -71,9 +71,9 @@ const Footer = () => {
                     </p>
 
                     <BottomLinks>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Disclaimer</a>
+                        <a href="#home">Privacy Policy</a>
+                        <a href="#home">Terms of Service</a>
+                        <a href="#home">Disclaimer</a>
                     </BottomLinks>
                 </Bottom>
 
