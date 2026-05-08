@@ -1,0 +1,62 @@
+:root {
+  --maroon:       #5c0a14;
+  --maroon-deep:  #3a0509;
+  --maroon-mid:   #8b1a28;
+  --gold:         #c9a227;
+  --gold-light:   #f0c04a;
+  --gold-pale:    #ffe9a0;
+  --ivory:        #fdf6e3;
+  --ivory-dark:   #f5e6c8;
+  --cream:        #fff8ec;
+  --text-dark:    #2a0a0e;
+  --text-mid:     #5a2030;
+  --text-light:   #8a4050;
+  --white:        #ffffff;
+  --shadow-gold:  0 0 30px rgba(201,162,39,0.3);
+  --shadow-dark:  0 4px 30px rgba(0,0,0,0.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background: var(--maroon-deep);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* ── STARS BACKGROUND ── */
+.stars-bg {
+  position: fixed; inset: 0;
+  background: radial-gradient(ellipse at center, #1a0510 0%, #0d0208 100%);
+  z-index: -2;
+  pointer-events: none;
+}
+.stars-bg::before, .stars-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,220,120,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 40%, rgba(255,240,180,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50% 10%, rgba(255,220,100,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 60%, rgba(255,200,80,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 25%, rgba(255,240,150,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 80%, rgba(255,220,120,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 75%, rgba(255,240,180,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 80% 85%, rgba(255,220,100,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 45% 50%, rgba(255,200,80,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 55%, rgba(255,240,150,0.5) 0%, transparent 100%);
+  background-size: 300px 300px;
+  animation: twinkle 6s infinite alternate;
+}
+.stars-bg::after {
+  background-size: 200px 200px;
+  animation-delay: 3s;
+  animation-duration: 9s;
+}
+@keyframes twinkle {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
