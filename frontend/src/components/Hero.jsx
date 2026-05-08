@@ -100,15 +100,15 @@ const ringPulse = keyframes`
   50% { opacity: 0.5; transform: translate(-50%,-50%) scale(1.02); }
 `;
 
-const scrollDot = keyframes`
-  0% { top: 6px; opacity: 1; }
-  100% { top: 22px; opacity: 0; }
-`;
+// const scrollDot = keyframes`
+//   0% { top: 6px; opacity: 1; }
+//   100% { top: 22px; opacity: 0; }
+// `;
 
-const bounce = keyframes`
-  0%,100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
-`;
+// const bounce = keyframes`
+//   0%,100% { transform: translateX(-50%) translateY(0); }
+//   50% { transform: translateX(-50%) translateY(8px); }
+// `;
 
 /* Layout */
 
@@ -153,16 +153,16 @@ const Content = styled.div`
   animation: ${fadeInUp} 1s ease both;
 `;
 
-const Badge = styled.div`
-  display: inline-block;
-  font-family: 'Cinzel', serif;
-  font-size: 0.75rem;
-  color: var(--gold-light);
-  border: 1px solid var(--gold);
-  padding: 6px 18px;
-  border-radius: 30px;
-  margin-bottom: 20px;
-`;
+// const Badge = styled.div`
+//   display: inline-block;
+//   font-family: 'Cinzel', serif;
+//   font-size: 0.75rem;
+//   color: var(--gold-light);
+//   border: 1px solid var(--gold);
+//   padding: 6px 18px;
+//   border-radius: 30px;
+//   margin-bottom: 20px;
+// `;
 
 const Title = styled.h1`
   font-family: 'Cinzel Decorative', serif;
@@ -292,31 +292,3 @@ const Ring3 = styled(Ring1)`
   animation-delay: 2s;
 `;
 
-/* Scroll Indicator */
-
-const ScrollDown = styled.div`
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  animation: ${bounce} 2s infinite;
-
-  span {
-    display: block;
-    width: 24px;
-    height: 40px;
-    border: 2px solid rgba(201,162,39,0.5);
-    border-radius: 12px;
-    position: relative;
-  }
-
-  span::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 8px;
-    background: var(--gold-light);
-    left: 50%;
-    transform: translateX(-50%);
-    animation: ${scrollDot} 2s infinite;
-  }
-`;
