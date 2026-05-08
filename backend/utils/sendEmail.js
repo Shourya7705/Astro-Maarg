@@ -1,49 +1,24 @@
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 
-const sendEmail = async (consultationData) => {
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+const sendEmail = async (data) => {
   try {
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-  tls: {
-    rejectUnauthorized: false,
-  },
-});
-
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-
+    const response = await resend.emails.send({
+      from: "onboarding@resend.dev",
       to: "shouryasaxena7705@gmail.com",
-
-      subject: "New Astro Maarg Consultation Request",
-
+      subject: "New Consultation Form",
       html: `
-        <h2>New Consultation Request</h2>
-
-        <p><strong>Full Name:</strong> ${consultationData.fullName}</p>
-
-        <p><strong>Phone:</strong> ${consultationData.phone}</p>
-
-        <p><strong>Email:</strong> ${consultationData.email}</p>
-
-        <p><strong>Date of Birth:</strong> ${consultationData.dob}</p>
-
-        <p><strong>Birth Time:</strong> ${consultationData.birthTime}</p>
-
-        <p><strong>Birth Place:</strong> ${consultationData.birthPlace}</p>
-
-        <p><strong>Consultation Type:</strong> ${consultationData.consultationType}</p>
-
-        <p><strong>Message:</strong> ${consultationData.message}</p>
+        <h2>New Booking</h2>
+        <p><strong>Name:</strong> ${data.fullName}</p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Message:</strong> ${data.message}</p>
       `,
-    };
+    });
 
-    await transporter.sendMail(mailOptions);
+    console.log(response);
 
-    console.log("Email Sent Successfully");
   } catch (error) {
     console.log(error);
   }
